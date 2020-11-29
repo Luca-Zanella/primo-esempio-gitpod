@@ -9,7 +9,7 @@ export class UserItemComponent implements OnInit {
 
   name: string; // aggiunta la proprietà "name"
   constructor() {
-    this.name = "Felipes"; //assegnarà name "Felipe" a tutte le istanze
+    this.name = "Felipe"; //assegnarà name "Felipe" a tutte le istanze
   }
 
   ngOnInit(): void {
