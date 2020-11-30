@@ -1,0 +1,16 @@
+<ul>
+    <!-- dentro ngFor c'è dentro un vero for -->
+    <!-- * -> vogliamo usare la direttiva ngFor per questo attributo -->
+    <!--name viene ripreso da {{}}} e messa tramite un for con una lista -->
+    <li *ngFor="let name of names">
+        <!--In questo caso assegnamo la variabile name di user-item dentro l'li di user-list-->
+        <!--Andiamo a prendere la variabile @Input tramite le []-->
+        <!--e la andiamo ad assegnare alla varibile appena creata name-->
+        <!--così da usare app-user-item ts per prendere le informazioni
+             e il tag per metterle dentro la nostra li nel user-list-->
+        <!--la variabile viene presa solo in quale tag si mette-->
+        <!--ad esempio se mette name in list e name in hello world uscira
+        solo la variabile in base a quale tag io metta dentro [name]-->
+        <app-user-item [name]="name"></app-user-item>
+    </li>
+</ul>
