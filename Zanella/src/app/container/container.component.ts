@@ -7,7 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContainerComponent implements OnInit {
 
-  constructor() { }
+
+  name:String[]
+
+  constructor() {
+    this.name = ["Ruspa","Autocarro","Gru","Escavatori","AutoGru","Elevatori da Cantiere","Carrelli elevatori","trattori","rimorchi","piattaforma"]
+   }
 
   ngOnInit(): void {
   }
