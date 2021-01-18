@@ -1,0 +1,27 @@
+<form class="container-fluid" style="margin-top:10px;">
+    <div>
+        <!--Questo per crare la label dove verrà ciclata la frase all'interno -->
+        <label for="spamText">Cose Utili:</label>
+        <!--Questo per prendere in input qualcosa che prenderà il nome di spamText agggiungendo #-->
+        <input name="spamText" #newSpamText>
+    </div>
+    <div>
+        <!--Qui semplicemente prende quello che scrive l'utente e lo mette nella variabile # chiamata newNum-->
+        <label for="num">Spam:</label>
+        <input name="num" #newNum>
+    </div>
+
+    <!--Nel bottone metto 2 variabile che poi vengono riprese dal metodo creato nel ts-->
+    <button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false" autocomplete="off" (click)="addSpam(newSpamText,newNum)">
+        Submit Spam
+    </button>
+</form>
+
+<ul>
+    <!--Ciclo una qualsiasi variabile sul nostro array creato nel ts-->
+    <li *ngFor="let x of articles">
+        <!--Ricordarsi di ciclare la variabile che si è messo come ad esempio x-->
+        <!--Per fare input si usa il solito metodo per passare i dati-->
+        <app-agg [IGive]="x"></app-agg>
+    </li>
+</ul>
